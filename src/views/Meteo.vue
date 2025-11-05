@@ -3,12 +3,13 @@ import { ref, onMounted } from "vue";
 import { fetchMeteo } from "@/services/meteo.js";
 import Resultat from "@/components/Resultat.vue";
 
+
 const villes = [
   { code: "bordeaux", nom: "Bordeaux" },
   { code: "arcachon", nom: "Arcachon" },
   { code: "libourne", nom: "Libourne" },
   { code: "blaye", nom: "Blaye" },
-  { code: "langon", nom: "Langon" }
+  
 ];
 
 const ville = ref("bordeaux");
@@ -34,8 +35,8 @@ onMounted(chargerMeteo);
 </script>
 
 <template>
+
   <div class="container py-4">
-    <Météo class="text-center mb-4">Météo — Gironde</Météo>
 
     <form class="d-flex flex-column align-items-center gap-2" @submit.prevent>
       <label for="ville" class="form-label">Choisir une ville :</label>
@@ -57,4 +58,5 @@ onMounted(chargerMeteo);
       />
     </div>
   </div>
+
 </template>
